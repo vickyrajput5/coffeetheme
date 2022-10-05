@@ -1,0 +1,179 @@
+// main  menu start
+.menu-index-index {
+  .main-menu {
+    .container-menu {
+      @include flex-c-sb;
+      padding: 100px 0;
+      width: 100%;
+      height: auto;
+      @include max-breakpoints(tablet-small) {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+      // coffee page start
+      .coffee {
+        @include flex-c-sb;
+        width: 100%;
+        height: auto;
+        @include max-breakpoints(tablet-small) {
+          flex-direction: column;
+          padding: 20px 0;
+        }
+
+        .left-block {
+          order: 2;
+          padding-left: 20px;
+          @include max-breakpoints(tablet-small) {
+            padding: 0;
+          }
+        }
+        .right-block {
+          order: 1;
+        }
+      }
+      // coffee page end
+      .left-block {
+        width: 100%;
+        max-width: 351px;
+        object-fit: cover;
+        @include max-breakpoints(tablet-small) {
+          max-width: 100%;
+          order: 2;
+        }
+        ul {
+          width: 100%;
+
+          li {
+            width: 100%;
+
+            &:not(:last-child) {
+              padding-bottom: 70px;
+              @include max-breakpoints(tablet-small) {
+                padding-bottom: 30px;
+              }
+            }
+
+            .card {
+              display: flex;
+
+              .card-img {
+                width: 100%;
+                max-width: 100px;
+                height: auto;
+                @include max-breakpoints(tablet-small) {
+                  max-width: 80px;
+                  padding-right: 10px;
+                }
+              }
+              .card-description {
+                width: 100%;
+                max-width: 251px;
+                height: auto;
+                padding-left: 15px;
+                @include max-breakpoints(tablet-small) {
+                  padding: 0;
+                }
+                .cart-title {
+                  @include h4;
+                  columns: $color-1;
+                }
+                .cart-details {
+                  @include sub-heading;
+                  padding: 10px 0;
+                  color: $color-9;
+                }
+                .cart-price {
+                  @include h5;
+                  color: $light-black;
+                }
+              }
+            }
+          }
+        }
+      }
+      .right-block {
+        width: 100%;
+        max-width: 800px;
+        @include max-breakpoints(tablet-small) {
+          padding-bottom: 30px;
+          order: 1;
+        }
+        img {
+          height: 680px;
+          object-fit: cover;
+          @include max-breakpoints(tablet-small) {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  // main menu end
+
+  // coffee banner start
+
+  .coffee-banner {
+    background: url("../images/book-table-images/bori-cholate.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    @include flex-c;
+    .container {
+      .coffee-banner-box {
+        @include flex-c;
+        @include max-breakpoints(tablet-small) {
+          flex-direction: column;
+          text-align: center;
+        }
+        .coffee-banner-details {
+          width: 100%;
+          max-width: 450px;
+          height: 106px;
+          .subheading {
+            @include sub-heading;
+            color: $color-11;
+          }
+          .details {
+            @include h3;
+            color: $color-4;
+          }
+        }
+        .btn-default {
+          padding-left: 40px;
+          @include max-breakpoints(tablet-small) {
+            padding-left: 0;
+          }
+          button {
+            @extend %primary-btn-large;
+          }
+        }
+      }
+    }
+  }
+
+  // coffee banner end
+
+  // image gallery start
+
+  .image-gallery {
+    @include flex-c-c;
+
+    @include max-breakpoints(tablet-small) {
+      flex-wrap: wrap;
+    }
+    .imgs {
+      @include max-breakpoints(tablet-small) {
+        padding: 5px;
+      }
+    }
+  }
+  //
+
+  // footer
+  footer {
+    padding-top: 0;
+  }
+}

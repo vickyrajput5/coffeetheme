@@ -1,0 +1,330 @@
+// main about
+.main-about {
+  position: relative;
+  background: $color-2;
+  @include spacing-section-100;
+  .container {
+    .about-container {
+      // about title style
+      .about-title {
+        width: 100%;
+        max-width: 930px;
+        color: white;
+        // title heading
+        .heading {
+          h1 {
+            &::after {
+              display: none;
+            }
+          }
+        }
+        // about members list
+        .list {
+          display: flex;
+          padding-top: 20px;
+          .members {
+            padding-right: 10px;
+          }
+          .resturants {
+            padding-left: 10px;
+          }
+        }
+      }
+      //   about description
+      .about-description {
+        max-width: 380px;
+        width: 100%;
+        color: $color-11;
+        margin-left: auto;
+        padding-top: 10px;
+        @include max-breakpoints(tablet-small) {
+          margin-left: 0px;
+        }
+      }
+      //about image
+      //   .about-title-image {
+      //     position: absolute;
+      //     top: 590px;
+      //     left: 100px;
+      //     width: 100%;
+      //     max-width: 600px;
+      //   }
+    }
+  }
+}
+
+// Coffee  Section start
+.coffee-sec {
+  @include spacing-section-70;
+  .container {
+    .coffee-block {
+      @include flex-c-sb;
+      width: 100%;
+      max-width: 1015px;
+      margin: 0 auto;
+      @include max-breakpoints(tablet-small) {
+        flex-direction: column;
+      }
+      .left-block {
+        width: 100%;
+        max-width: 365px;
+        @include max-breakpoints(tablet-small) {
+          max-width: 300px;
+        }
+      }
+      .right-block {
+        width: 100%;
+        max-width: 540px;
+        padding-left: 40px;
+        @include max-breakpoints(tablet-small) {
+          max-width: 300px;
+          padding: 20px 0px;
+        }
+
+        h3 {
+          margin-bottom: 10px;
+          &::after {
+            display: none;
+          }
+        }
+
+        p {
+          color: $color-8;
+          &:not(:last-child) {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// coffee section end
+
+// coffee review start
+.coffee-review {
+  width: 100%;
+  @include spacing-section-70;
+  @include max-breakpoints(tablet-small) {
+    padding: 20px;
+  }
+  .container {
+    .list {
+      max-width: 1010px;
+      margin: 0 auto;
+      ul {
+        @include flex-c-sb;
+        flex-wrap: wrap;
+
+        li {
+          width: 25%;
+          padding-left: 10px;
+          text-align: center;
+          @include max-breakpoints(tablet-small) {
+            width: 50%;
+          }
+          // @include max-breakpoints(mobile) {
+          //   width: 100%;
+          // }
+
+          .count {
+            padding-bottom: 5;
+          }
+          .heading {
+            @include bodytext;
+            color: $color-9;
+          }
+        }
+      }
+    }
+  }
+}
+
+// coffee review end
+
+//  coffee team start
+
+.coffee-team {
+  .container {
+    .coffee-team-block {
+      .upper-block {
+        margin: 0 auto;
+        max-width: 550px;
+        width: 100%;
+        text-align: center;
+
+        h3 {
+          padding-bottom: 5px;
+          &::after {
+            display: none;
+          }
+        }
+        p {
+          color: $color-9;
+        }
+      }
+      .lower-block {
+        @include spacing-section-50;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: -20px;
+          margin-top: -20px;
+          @include max-breakpoints(tablet-small) {
+            margin-left: -10px;
+            margin-top: -10px;
+          }
+
+          li {
+            width: 33.33%;
+            padding-left: 20px;
+            padding-top: 20px;
+            @include max-breakpoints(tablet-small) {
+              width: 50%;
+              padding-left: 10px;
+              padding-top: 10px;
+            }
+            @include max-breakpoints(mobile) {
+              width: 100%;
+            }
+            .item-info {
+              background-color: $color-12;
+              padding: 40px;
+              @include max-breakpoints(tablet-small) {
+                padding: 10px;
+              }
+              .item-image {
+                @include flex-jcc;
+                img {
+                  max-width: 250px;
+                  width: 100%;
+                  border-radius: 50%;
+                  padding-bottom: 30px;
+                  @include max-breakpoints(mobile) {
+                    padding-bottom: 10px;
+                    max-width: 180px;
+                  }
+                }
+              }
+              .item-details {
+                text-align: center;
+                @include max-breakpoints(tablet-small) {
+                  padding: 10px;
+                }
+                .item-label {
+                  columns: $color-7;
+                  padding-bottom: 5px;
+                  @include max-breakpoints(mobile) {
+                    padding-bottom: 3px;
+                  }
+                }
+                .item-title {
+                  padding-bottom: 5px;
+                  @include max-breakpoints(mobile) {
+                    padding-bottom: 3px;
+                  }
+                }
+
+                .item-description {
+                  p {
+                    color: $color-9;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//  coffee team end
+
+.coffee-icons {
+  max-width: 1240px;
+  margin: 0 auto;
+  @include spacing-section-70;
+  .container {
+    .icons-block {
+      ul {
+        @include flex-c-sb;
+        li {
+          @include flex-c-c;
+          width: 100%;
+          max-width: 120px;
+          min-height: 120px;
+        }
+      }
+    }
+  }
+}
+
+//  testimonail start
+.testimonial {
+  .container {
+    .testimonail-title {
+      max-width: 405px;
+      margin: 0 auto;
+      text-align: center;
+      @include max-breakpoints(tablet-small) {
+        max-width: 300px;
+      }
+      h5 {
+        @include sub-heading;
+        color: $color-9;
+        padding-bottom: 10px;
+      }
+      h3 {
+        color: $color-1;
+        padding-bottom: 50px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .testi-block {
+      @include flex-c-sb;
+      flex-wrap: wrap;
+
+      .coffee-beans-decription {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        @include max-breakpoints(tablet-small) {
+          max-width: 300px;
+        }
+        .pro-image {
+          @include flex-c-c;
+          padding-bottom: 10px;
+        }
+        .pro-description {
+          @include flex-c;
+
+          flex-direction: column;
+          &:not(:last-child) {
+            padding-bottom: 5px;
+          }
+          h5 {
+            @include heading;
+            color: $color-6;
+          }
+          p {
+            color: $color-9;
+          }
+
+          h6 {
+            @include sub-heading;
+            color: $color-7;
+          }
+        }
+      }
+      .coffee-beans-img {
+        width: 100%;
+        max-width: 645px;
+        @include max-breakpoints(tablet-small) {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+}
